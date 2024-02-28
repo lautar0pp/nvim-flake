@@ -1,48 +1,39 @@
-local cmd = vim.cmd
-local fn = vim.fn
-local opt = vim.o
-local g = vim.g
-
--- <leader> key. Defaults to `\`. Some people prefer space.
--- g.mapleader = ' '
--- g.maplocalleader = ' '
-
-opt.compatible = false
-
--- Enable true colour support
-if fn.has('termguicolors') then
-  opt.termguicolors = true
-end
-
 -- See :h <option> to see what the options do
+vim.opt.guicursor = ""
 
--- Search down into subfolders
-opt.path = vim.o.path .. '**'
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
-opt.number = true
-opt.relativenumber = true
-opt.cursorline = true
-opt.lazyredraw = true
-opt.showmatch = true -- Highlight matching parentheses, etc
-opt.incsearch = true
-opt.hlsearch = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
-opt.spell = true
-opt.spelllang = 'en'
+vim.opt.smartindent = true
 
-opt.expandtab = true
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
-opt.foldenable = true
-opt.history = 2000
-opt.nrformats = 'bin,hex' -- 'octal'
-opt.undofile = true
-opt.splitright = true
-opt.splitbelow = true
-opt.cmdheight = 0
+vim.opt.wrap = false
 
-opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+
+vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
+
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
 -- Configure Neovim diagnostic messages
 
@@ -51,7 +42,7 @@ local function prefix_diagnostic(prefix, diagnostic)
 end
 
 local sign = function(opts)
-  fn.sign_define(opts.name, {
+  vim.fn.sign_define(opts.name, {
     texthl = opts.name,
     text = opts.text,
     numhl = '',
@@ -97,13 +88,10 @@ vim.diagnostic.config {
   },
 }
 
-g.editorconfig = true
-
-vim.opt.colorcolumn = '100'
 
 -- Native plugins
-cmd.filetype('plugin', 'indent', 'on')
-cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
+vim.cmd.filetype('plugin', 'indent', 'on')
+vim.cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
@@ -111,5 +99,5 @@ vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
 -- this should be at the end, because
 -- it causes neovim to source ftplugins
 -- on the packpath when passing a file to the nvim command
-cmd.syntax('on')
-cmd.syntax('enable')
+vim.cmd.syntax('on')
+vim.cmd.syntax('enable')
