@@ -41,7 +41,6 @@ with final.pkgs.lib; let
     cmp-cmdline-history # cmp command line history suggestions
     # ^ nvim-cmp extensions
     # git integration plugins
-    neogit # https://github.com/TimUntersberger/neogit/
     vim-fugitive # https://github.com/tpope/vim-fugitive/
     # ^ git integration plugins
     # telescope and extensions
@@ -68,6 +67,12 @@ with final.pkgs.lib; let
 
   extraPackages = with pkgs; [
     # language servers, etc.
+    nodePackages."bash-language-server"
+    nodePackages."pyright"
+    nodePackages."typescript"
+    nodePackages."typescript-language-server"
+    nodePackages."vscode-langservers-extracted"
+    gopls
     lua-language-server
     nil # nix LSP
   ];
