@@ -1,5 +1,9 @@
-local harpoon = require("harpoon")
+if vim.g.did_load_harpoon_plugin then
+  return
+end
+vim.g.did_load_harpoon_plugin = true
 
+local harpoon = require("harpoon")
 harpoon:setup()
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
