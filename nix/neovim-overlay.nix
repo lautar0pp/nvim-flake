@@ -61,7 +61,7 @@ with final.pkgs.lib; let
     nvim-treesitter-context # nvim-treesitter-context
     eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     zen-mode-nvim
-    fidget
+    fidget-nvim
 
     # libraries that other plugins depend on
     sqlite-lua
