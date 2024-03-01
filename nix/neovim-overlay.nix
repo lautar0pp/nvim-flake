@@ -68,8 +68,6 @@ with final.pkgs.lib; let
     plenary-nvim
     nvim-web-devicons
     vim-repeat
-
-    which-key-nvim
   ];
 
   extraPackages = with pkgs; [
