@@ -19,6 +19,7 @@
     nixpkgs,
     flake-utils,
     gen-luarc,
+    harpoon,
     ...
   }: let
     supportedSystems = [
