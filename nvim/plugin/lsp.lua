@@ -1,3 +1,4 @@
+require("fidget").setup()
 local lspconfig = require('lspconfig')
 
 local language_servers = {
