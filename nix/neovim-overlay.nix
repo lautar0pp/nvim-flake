@@ -49,7 +49,7 @@ with final.pkgs.lib; let
     vim-fugitive # https://github.com/tpope/vim-fugitive/
 
     # Greatest plugin of all times
-    harpoon2
+    (mkNvimPlugin inputs.harpoon "harpoon")
 
     # telescope and extensions
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
