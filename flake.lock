@@ -55,6 +55,23 @@
         "type": "github"
       }
     },
+    "harpoon": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1706306053,
+        "narHash": "sha256-RjwNUuKQpLkRBX3F9o25Vqvpu3Ah1TCFQ5Dk4jXhsbI=",
+        "owner": "ThePrimeagen",
+        "repo": "harpoon",
+        "rev": "a38be6e0dd4c6db66997deab71fc4453ace97f9c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ThePrimeagen",
+        "ref": "harpoon2",
+        "repo": "harpoon",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1708475490,
@@ -109,6 +126,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
+        "harpoon": "harpoon",
         "nixpkgs": "nixpkgs_2"
       }
     },
