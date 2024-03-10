@@ -68,6 +68,8 @@ with final.pkgs.lib; let
     plenary-nvim
     nvim-web-devicons
     vim-repeat
+
+    vim-be-good
   ];
 
   extraPackages = with pkgs; [
