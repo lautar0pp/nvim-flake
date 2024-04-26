@@ -8,10 +8,10 @@
 
     # Add bleeding-edge plugins here.
     # They can be updated with `nix flake update` (make sure to commit the generated flake.lock)
-     harpoon = {
-       url = "github:ThePrimeagen/harpoon/harpoon2";
-       flake = false;
-     };
+     #harpoon = {
+       #url = "github:ThePrimeagen/harpoon/harpoon2";
+       #flake = false;
+     #};
   };
 
   outputs = inputs @ {

@@ -39,7 +39,6 @@ with final.pkgs.lib; let
     cmp-path # file paths as completion source | https://github.com/hrsh7th/cmp-path/
     cmp-cmdline # cmp command line suggestions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
-    luasnip # snippets | https://github.com/l3mon4d3/luasnip/
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
 
     # Trouble
@@ -49,22 +48,17 @@ with final.pkgs.lib; let
     vim-fugitive # https://github.com/tpope/vim-fugitive/
 
     # Greatest plugin of all times
-    (mkNvimPlugin inputs.harpoon "harpoon")
+    harpoon2
 
     # telescope and extensions
     telescope-nvim # https://github.com/nvim-telescope/telescope.nvim/
 
     # UI
-    lualine-nvim # Status line | https://github.com/nvim-lualine/lualine.nvim/
-    nvim-navic # Add LSP location to lualine | https://github.com/SmiteshP/nvim-navic
-    statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
     nvim-treesitter-context # nvim-treesitter-context
-    eyeliner-nvim # Highlights unique characters for f/F and t/T motions | https://github.com/jinh0/eyeliner.nvim
     zen-mode-nvim
     fidget-nvim
 
     # libraries that other plugins depend on
-    sqlite-lua
     plenary-nvim
     nvim-web-devicons
     vim-repeat
