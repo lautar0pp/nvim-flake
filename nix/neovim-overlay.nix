@@ -40,6 +40,7 @@ with final.pkgs.lib; let
     cmp-cmdline # cmp command line suggestions
     nvim-cmp # https://github.com/hrsh7th/nvim-cmp
     cmp_luasnip # snippets autocompletion extension for nvim-cmp | https://github.com/saadparwaiz1/cmp_luasnip/
+    luasnip
 
     # Trouble
     trouble-nvim
