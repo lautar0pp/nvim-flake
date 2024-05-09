@@ -131,7 +131,6 @@ with lib;
       # Append nvim and after directories to the runtimepath
       + ''
         vim.opt.rtp:append('${nvimRtp}/nvim')
-        vim.opt.rtp:append('${nvimRtp}/after')
       '';
 
     # Add arguments to the Neovim wrapper script
