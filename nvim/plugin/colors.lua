@@ -7,6 +7,10 @@ function ColorMyPencils(color)
 
 end
 
+require("gruvbox").setup({
+    transparent_mode = true,
+})
+
 require("tokyonight").setup({
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -28,7 +32,8 @@ require('rose-pine').setup({
     disable_background = true,
 })
 
-vim.cmd("colorscheme rose-pine")
+--vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme gruvbox")
 
 ColorMyPencils()
 
